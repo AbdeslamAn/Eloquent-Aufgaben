@@ -13,5 +13,6 @@ class Autor extends Model
     public function buch()
     {
         return $this->hasMany(Buch::class);
+        
     }
 }
