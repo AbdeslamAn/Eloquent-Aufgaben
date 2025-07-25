@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('buchs', function (Blueprint $table) {
             $table->id();
+
+            $table->string('title');
+            $table->text('beschreibung');
+            $table->decimal('preis', 8, 2);
+            $table->foreingId('autor_id')->constraind()->onDelete('cascade');
+
             $table->timestamps();
         });
     }
