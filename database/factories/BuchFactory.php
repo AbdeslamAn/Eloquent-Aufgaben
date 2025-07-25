@@ -17,7 +17,13 @@ class BuchFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'title' => fake()->sentence(3),
+            'beschreibung' => fake()->paragraph,
+            'created_at' => fake()->dateTimeBetween('-2 years'),
+            'updated_at' => function (array $attributes)
+            {
+                return fake()->dateTimeBetween($attributes['created_at']);
+            }
         ];
     }
 }
