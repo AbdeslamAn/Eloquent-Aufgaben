@@ -19,6 +19,7 @@ class BuchFactory extends Factory
         return [
             'title' => fake()->sentence(3),
             'beschreibung' => fake()->paragraph,
+            'preis' => fake()->randomFloat(2, 5, 100),
             'created_at' => fake()->dateTimeBetween('-2 years'),
             'updated_at' => function (array $attributes)
             {
