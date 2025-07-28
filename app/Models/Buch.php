@@ -10,6 +10,8 @@ class Buch extends Model
 {
     use HasFactory;
 
+    protected $table = 'buchs'; // <-- Tabellenname manuell festlegen
+
     public function autor()
     {
         return $this->belongsTo(Autor::class);
