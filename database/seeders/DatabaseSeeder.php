@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
 
         Autor::factory(100)->create()->each(function ($autor)
         {
-            $numBuch = random_int(5, 30);
+            $numBuch = random_int(2, 5);
 
             Buch::factory()->count($numBuch)->for($autor)->create();
         });
