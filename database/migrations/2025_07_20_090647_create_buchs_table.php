@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('beschreibung');
             $table->decimal('preis', 8, 2);
-            $table->foreingId('autor_id')->constraind()->onDelete('cascade');
+            $table->foreignId('autor_id')->constraind()->onDelete('cascade');
 
             $table->timestamps();
         });
