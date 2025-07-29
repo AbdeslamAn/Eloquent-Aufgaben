@@ -12,6 +12,8 @@ class Buch extends Model
 
     protected $table = 'buchs'; // <-- Tabellenname manuell festlegen
 
+    protected $fillable = ['title', 'beschreibung', 'preis', 'autor_id'];
+
     public function autor()
     {
         return $this->belongsTo(Autor::class);
